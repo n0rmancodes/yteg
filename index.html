@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>yteg | youtube embed generator</title>
+		<link href="css/style.css" rel="stylesheet"> 
+	</head>
+	<body>
+		<h1>yteg</h1>
+		<p><i>the</i> light weight and easy to use youtube embed generator to use</p>
+		<div id="step1" class="fullOpacity step">
+			<input id="url" placeholder="enter a youtube link or id" autocomplete="off" oninput="check('url')">
+		</div>
+		<div id="step2" class="step" style="display:none;">
+			<h3>embed</h3>
+			<iframe id="embed"></iframe><br>
+			<h3>options</h3>
+			<input onInput="updateEmbed('ap')" type="checkbox" id="autoplay">
+			<label for="autoplay">autoplay?</label><br>
+			<input type="checkbox" id="loop">
+			<label onInput="updateEmbed('lo')" for="loop">loop?</label><br>
+			<input type="checkbox" id="privacy">
+			<label onInput="updateEmbed('an')" for="privacy">anti-cookie embed?</label><br>
+			<input type="checkbox" id="disableKb">
+			<label onInput="updateEmbed('dk')" for="disableKb">disable keyboard shortcuts?</label>
+			<button onclick="formUrl()">finish</button>
+		</div>
+		<script src="js/app.js"></script>
+	</body>
+</html>
